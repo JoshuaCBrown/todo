@@ -12,6 +12,5 @@ export const getFormData = function() {
         uDeadLineDate,
         uDeadLineTime,
     ];
-    console.log(formDataArr);
     return formDataArr;
 };

@@ -145,6 +145,7 @@ body {
     border-top: none;
     background: rgba(255, 255, 255, 0.603);
     box-shadow:0px 15px 15px rgb(77, 77, 77);
+    overflow:scroll;
 }
 
 .control-btns {
@@ -262,6 +263,7 @@ button:active {
 } */
 
 .add-child {
+    position: absolute;
     background-color: rgba(128, 128, 128, 0.548);
     /* display: flex; */
     place-items: center;
@@ -286,4 +288,11 @@ form {
 
 .show-this {
     display: flex;
+}
+
+.task-div {
+    background: linear-gradient(to right, rgb(238, 238, 238), silver);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }

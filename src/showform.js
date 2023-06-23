@@ -3,5 +3,4 @@ export const showForm = function() {
     if (myFormDiv.classList.contains('show-this')) {
         myFormDiv.classList.remove('show-this');
     } else {myFormDiv.classList.add('show-this')};
-    console.log(myFormDiv.style.display);
 };
