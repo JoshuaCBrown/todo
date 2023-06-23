@@ -50,12 +50,39 @@
 			<div class="todo-div">
 
 			</div>
+			<div id="add-container">
+				<div id="nav-bar-trans">&nbsp;</div>
+					<div id="add-child">
+						<div id="add-form">
+							<form>
+								<label for="ftitle">Task title:</label><br>
+								<input type="text" id="ftitle" name="ftitle" value="Clean Room"><br>
+								<label for="fdescript">Details:</label><br>
+								<textarea id="fdescript" name="fdescript" rows="4" columns="50" value="Clean my clothes off the floor. Vacuum the rug."></textarea><br>
+								<label for="fpriority">Priority:</label>
+								<select name="fpriority" id="fpriority">
+									<option value="high">High</option>
+									<option value="medium">Medium</option>
+									<option value="low">Low</option>
+								</select><br>
+								<label for="fdeadlinedate">Deadline:</label><br>
+								<input type="date" name="fdeadlinedate" id="fdeadlinedate">
+								<input type="time" name="fdeadlinetime" id="fdeadlinetime"><br>
+								<input type="submit" name="fsubmit" id="fsubmit" value="ADD TASK">
+							</form>
+
+						</div>
+					</div>
+			</div>
 		</div>
 	</div>
 	<span class="bg-circle-red"></span>
 	<span class="bg-circle-orange"></span>
 	<span class="bg-circle-green"></span>
 	<span class="bg-circle-yellow"></span>
+	
+
+
 	<script src="main.js"></script>
 </body>
 </html>

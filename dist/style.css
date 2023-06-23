@@ -9,9 +9,9 @@ body {
     overflow: hidden;
 }
 
-div {
+/* div {
     
-}
+} */
 .container {
     display: grid;
     grid-template-columns: 14rem auto;
@@ -239,4 +239,43 @@ button:hover {
     z-index: -2;
     opacity: .1;
     border-radius: 50%;
+}
+
+/* #add-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 14rem auto;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+#nav-bar-trans {
+    background: transparent;
+}
+*/
+#add-child {
+    background-color: rgba(128, 128, 128, 0.548);
+    /* display: flex;
+    place-items: center;
+    justify-content: center; */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+} */
+#add-form {
+    position: relative;
+    border: 2px solid black;
+    background-color: white;
+    visibility: hidden;
+} 
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border: 2px solid black;
 }
