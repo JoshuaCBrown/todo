@@ -1,4 +1,7 @@
 export const showForm = function() {
-    const myForm = document.querySelector('#add-form');
-    myForm.classList.add('show-this');
+    const myFormDiv = document.querySelector('.add-child');
+    if (myFormDiv.classList.contains('show-this')) {
+        myFormDiv.classList.remove('show-this');
+    } else {myFormDiv.classList.add('show-this')};
+    console.log(myFormDiv.style.display);
 };
