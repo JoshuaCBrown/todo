@@ -46,24 +46,44 @@
 				</div>
 				<div class="todo-list">
 					<div class="add-child">
-						<div id="add-form">
+						<!-- <div id="add-form"> -->
 							<form id="fform" action="#">
-								<label for="ftitle">Task title:</label><br>
-								<input type="text" id="ftitle" name="ftitle" value="Clean Room"><br>
-								<label for="fdescript">Details:</label><br>
-								<textarea id="fdescript" name="fdescript" rows="4" columns="50" value="Clean my clothes off the floor. Vacuum the rug."></textarea><br>
-								<label for="fpriority">Priority:</label>
-								<select name="fpriority" id="fpriority">
-									<option value="high">High</option>
-									<option value="medium">Medium</option>
-									<option value="low">Low</option>
-								</select><br>
-								<label for="fdeadlinedate">Deadline:</label><br>
-								<input type="date" name="fdeadlinedate" id="fdeadlinedate">
-								<input type="time" name="fdeadlinetime" id="fdeadlinetime"><br>
+
+								<div class="form-div">
+									<div class="fdiv-tit-des">
+										<input type="text" id="ftitle" name="ftitle" value="Task Title"><br>
+										<label for="fdescript">Details</label><br>
+										<textarea id="fdescript" name="fdescript">Notes and details</textarea><br>
+									</div>
+									<div class="fdiv-prio-dline">
+										<div class="fdiv-priority">
+											<p>Priority</p>
+											<div>
+												<input type="radio" id="fp-hi" name="fpriority" value="fp-hi">
+												<label for="fp-hi">HIGH</label>
+												</select>
+											</div>
+											<div>
+												<input type="radio" id="fp-med" name="fpriority" value="fp-med" checked="true">
+												<label for="fp-med">MEDIUM</label>
+												</select>
+											</div>
+											<div>
+												<input type="radio" id="fp-low" name="fpriority" value="fp-low">
+												<label for="fp-low">LOW</label>
+												</select>
+											</div>
+										</div>
+										<div class="fdiv-deadline">
+											<label for="fdeadlinedate">Deadline:</label><br>
+											<input type="date" name="fdeadlinedate" id="fdeadlinedate">
+											<input type="time" name="fdeadlinetime" id="fdeadlinetime"><br>
+										</div>
+									</div>
+								</div>
 								<input type="submit" name="fsubmit" id="fsubmit" value="ADD TASK">
 							</form>
-						</div>
+						<!-- </div> -->
 					</div>
 
 				</div>

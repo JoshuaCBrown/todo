@@ -12,25 +12,37 @@ export const showTask = (task) => {
 
     const tTitle = document.createElement('h5');
     const tDescription = document.createElement('h5');
-    const tPriority = document.createElement('h5');
     const tDate = document.createElement('h5');
     const tTime = document.createElement('h5');
 
     tTitle.textContent = task.title;
     tDescription.textContent = task.description;
-    tPriority.textContent = task.priority;
     tDate.textContent = task.date;
     tTime.textContent = task.time;
 
+// add class-name for color based on priority value of task
+    switch (task.priority) {
+        case 'fp-hi':
+            tPriorityDiv.className = 'pr-red';
+            break;
+        case 'fp-med':
+            tPriorityDiv.className = 'pr-yellow';
+            break;
+        case 'fp-low':
+            tPriorityDiv.className = 'pr-green';
+            break;
+        default:
+            break;
+    };
+
     tTitleDiv.appendChild(tTitle);
     tDescriptionDiv.appendChild(tDescription);
-    tPriorityDiv.appendChild(tPriority);
     tDateDiv.appendChild(tDate);
     tTimeDiv.appendChild(tTime);
 
+    taskDiv.appendChild(tPriorityDiv);
     taskDiv.appendChild(tTitleDiv);
     taskDiv.appendChild(tDescriptionDiv);
-    taskDiv.appendChild(tPriorityDiv);
     taskDiv.appendChild(tDateDiv);
     taskDiv.appendChild(tTimeDiv);
 
