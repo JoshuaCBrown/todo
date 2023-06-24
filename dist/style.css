@@ -447,7 +447,7 @@ textarea {
 }
 
 .arrow-img:hover {
-    filter:invert(1);
+    filter:invert(.5);
 }
 
 .rotated-arrow {
@@ -456,4 +456,13 @@ textarea {
 
 .arrow-img:active {
     filter:hue-rotate(200deg);
+}
+
+.edit-task-div {
+    background-color:red;
+    display: none;
+}
+
+.show-edit-div {
+    display: grid;
 }

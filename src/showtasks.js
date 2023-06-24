@@ -1,6 +1,6 @@
 export const showTask = (task, taskList) => {
     const toDoList = document.querySelector('.todo-list');
-    const currentTasks = document.querySelectorAll('.task-div');
+    const currentTasks = document.querySelectorAll('.task-container');
     console.log(currentTasks);
     for (let i = 0; i < currentTasks.length; ++i) {
         toDoList.removeChild(currentTasks[i]);
@@ -8,6 +8,10 @@ export const showTask = (task, taskList) => {
     for (let i = 0; i < taskList.length; ++i) {
     //creates visible task from object and adds it to .todo-list div
         
+        const taskContainer = document.createElement('div');
+        taskContainer.className = 'task-container';
+        
+    //visible task div summary
 
         const taskDiv = document.createElement('div');
         taskDiv.className = 'task-div';
@@ -19,21 +23,19 @@ export const showTask = (task, taskList) => {
 
         const tPriorityDiv = document.createElement('div');
         const tTitleDiv = document.createElement('div');
-        // const tDescriptionDiv = document.createElement('div');
         const tDateDiv = document.createElement('div');
         const tTimeDiv = document.createElement('div');
 
         const tTitle = document.createElement('h5');
-        // const tDescription = document.createElement('h5');
         const tDate = document.createElement('h5');
         const tTime = document.createElement('h5');
 
         tTitle.textContent = taskList[i].title;
-        // tDescription.textContent = task.description;
+    
         tDate.textContent = taskList[i].date;
         tTime.textContent = taskList[i].time;
 
-    // add class-name for color based on priority value of task
+        // add class-name for color based on priority value of task
         switch (taskList[i].priority) {
             case 'fp-hi':
                 tPriorityDiv.className = 'pr-red';
@@ -60,7 +62,6 @@ export const showTask = (task, taskList) => {
 
 
         tTitleDiv.appendChild(tTitle);
-        // tDescriptionDiv.appendChild(tDescription);
         tDateDiv.appendChild(tDate);
         tTimeDiv.appendChild(tTime);
         
@@ -76,8 +77,33 @@ export const showTask = (task, taskList) => {
 
         taskDiv.appendChild(leftTaskDiv);
         taskDiv.appendChild(rightTaskDiv);
-        // taskDiv.appendChild(tDescriptionDiv);
+        
+//create editTaskDiv with class name to change visibility
 
-        toDoList.appendChild(taskDiv);
+        const editTaskDiv = document.createElement('div');
+        editTaskDiv.className = 'edit-task-div';
+        
+        const editTaskTitle = document.createElement('div');
+        editTaskTitle.className = 'edit-task-title';
+        const editTaskDescription = document.createElement('div');
+        editTaskDescription.className = 'edit-task-description';
+        const editTaskPriority = document.createElement('div');
+        editTaskPriority.className = 'edit-task-priority';
+        const editTaskDeadline = document.createElement('div');
+        editTaskDeadline.className = 'edit-task-deadline';
+        
+        editTaskTitle.textContent = taskList[i].title;
+        editTaskDescription.textContent = taskList[i].description;
+        
+        editTaskDiv.appendChild(editTaskTitle);
+        editTaskDiv.appendChild(editTaskDescription);
+         
+
+        // here I will get form elements and add them to edit box
+
+
+        taskContainer.appendChild(taskDiv);
+        taskContainer.appendChild(editTaskDiv);
+        toDoList.appendChild(taskContainer);
     }
 };
